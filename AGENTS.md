@@ -1,9 +1,33 @@
 # Overview
 
-This folder is a PaperJS scratch experiment.  
-Keep changes minimal and focused on the visual result.  
+This folder is a PaperJS scratch experiment.
+Keep changes minimal and focused on the visual result.
 
-## standard usage
+> [!IMPORTANT]
+> - Read `docs/CLASSES.md` before extending the class hierarchy.
+> - If extending `lib/paper-core.js`:
+>   - Create a copy as `lib/paper-ext.js`.
+>   - Maintain a list of library changes as concise bullets
+>     in `lib/CHANGELOG.md`.
+>   - Match PaperJS idioms, architecture, and code style
+>     **exactly** — even if it violates guidelines below.
+>   - Keep every change uniform with the surrounding code
+>     in naming, structure, and placement.
+
+## Workflow
+
+1. Analyze existing idioms, patterns, and conventions.
+2. Plan changes carefully; identify affected areas.
+3. Think hard — double-check the plan, ensure seamless integration.
+4. Perform changes; write tests if relevant.
+5. Audit all changes comprehensively; clean up aggressively.
+
+Maintain `docs/PROGRESS.md` throughout:
+log the current task and your steps.
+Tick off steps as you proceed.
+Write down any key findings you think are valuable.
+
+## Standard usage
 
 Run a local server:  
 
@@ -28,7 +52,7 @@ new paper.Path.Circle({
 })
 ```
 
-## advanced usage
+## Advanced usage
 
 Use PaperJS’ native extension system (`extend`) for stateful entities.  
 Use `inject` for surgical engine patching only with explicit need.  
@@ -66,4 +90,8 @@ paper.View.inject({
 Key pointers:  
 
 - Keep wrappers tiny and predictable  
-- Default to forwarding; swallow only when required  
+- Default to forwarding; swallow only when required
+
+## Library-fork usage
+
+Follow the instructions in the callout at the top of this file.
