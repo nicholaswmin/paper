@@ -2,15 +2,22 @@
 
 > [!WARNING]
 > Maintain this file religiously.
-> Log every task, tick off steps as you proceed,
-> and note key findings that would help another
-> agent or engineer with zero context.
+> Capture subtasks, log progress as you work,
+> and note key findings that would help another engineer
+> with zero context.
 
-## Task name
+## Current task
 
-- [ ] Step one
-- [ ] Step two
-- [x] Completed step
+See `docs/task.md`.
+
+## Subtasks
+
+- [ ] Define subtasks before coding
+- [ ] Tick off subtasks as you complete them
+
+## Log
+
+- [Timestamp] [What changed and why]
 
 ## Key findings
 

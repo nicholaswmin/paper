@@ -4,7 +4,13 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "test": "node --test \"**/*.test.js\"",
+    "test": "node --expose-gc --test \"**/*.test.js\"",
     "dev": "npx serve"
+  },
+  "dependencies": {
+    "canvas": "^3.2.1",
+    "jsdom": "^28.0.0",
+    "paper": "^0.12.18",
+    "skia-canvas": "^3.0.8"
   }
 }
