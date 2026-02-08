@@ -1,0 +1,10 @@
+{
+  "name": "paper-snippet",
+  "description": "a paperjs scratch experiment",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "test": "node --test \"**/*.test.js\"",
+    "dev": "npx serve"
+  }
+}
