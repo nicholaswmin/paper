@@ -1,25 +1,29 @@
-# Task
+## task
 
-This file defines the current task for this scratchpad.
-Keep it short and explicit so it is easy to search and reference.
+> implement *tile-based* dirty-rectangles
+> redraw optimisation directly in the library.
 
-## Current
 
-### Task title
+Problem: Any localised mutation redraws the entire
+canvas.
+Solution: Divide the canvas into tile canvases.
+On mutation, redraw only the affected tiles.
+Rules:
 
-**Goal:**
-TODO: what should exist or be true when done.
+Grid of CSS-positioned tile <canvas> elements,
+original canvas hidden.
+Dynamic tile size.
+On mutation: mark tiles intersecting old + new
+bounds as dirty.
+On frame: redraw only dirty tiles. Clean tiles
+cost nothing.
+Pan/zoom/resize: full redraw. No special handling.
+Instrument with performance.now().
+No spatial index for now
 
-**Done when:**
-- [ ] TODO: measurable completion condition
+---
 
-**Constraints:**
-- [ ] Keep changes minimal and focused on the visual result
-- [ ] Update `docs/PROGRESS.md` with subtasks and a running log
-
-**Notes:**
-TODO: optional context, links, or decisions.
-
-## Backlog
-
-- [ ] TODO: future task
+- analyze paperjs internals extensively before you begin
+- match the current archicteture in a seamless manner
+  match paperjs idioms, code style etc
+- take advantage of the testing setup to measure progress
